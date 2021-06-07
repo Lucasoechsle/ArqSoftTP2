@@ -38,6 +38,15 @@ div4{
   font-size: 125%;
   white-space: nowrap;
 }
+ol{
+  vertical-align: top;
+}
+div5{
+  text-align: center;
+}
+form{
+  text-align: center;
+}
 /* si hago fotter1, puedo editar cada uno de elllos como quiera y ver como separar los subtitulos de las fotos y que los obrdes de los de la dercha
 sean mas parejos que los de la izquieda, puedp poner el logo en h1 para editarlo en fotter, la foto del gol tren, la iba a poner
  en todas las pagnas pero mejor la dejo solo en la de los produtcos, asi q la saque de l ayout y la puse arriba del en homepage*/
