@@ -17,17 +17,22 @@ module.exports.bootstrap = async function() {
   // ```
   // // Set up fake development data (or if we already have some, avast)
    if (await User.count() > 0) {
-     console.log("No Vacia")
+     console.log('No Vacia');
      return;
    }
-   console.log("Vacia")
-   await User.createEach([ //son arreglos por eso se pasa en llaves
-     { email: 'ry@example.com',
-       full: 'Ryan Dahl',
-      password: '1234'},
-     { email: 'juan@pepe.com',
-       full: 'Juan Jose',
-      password: '4321'},
-   ]);
+   console.log('Vacia');
+   await User.createEach([
+     {
+       email: 'ry@example.com',
+       name: 'Ryan Dahl',
+      password: '12345',
+      },
+     {
+       email: 'juan@pepe.com',
+       name: 'Juan Jose',
+      password: '54321' ,
+     },
+
+]);
 
 };

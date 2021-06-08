@@ -14,7 +14,7 @@
       <div1 style="float:left; width:8%">
         <a href="/" class="btn btn-primary">Productos</a> </div1>
       <div2 style="float:left; width:8%">
-        <a href="/login" class="btn btn-primary">Contacto</a>
+        <a href="/login" class="btn btn-primary">login</a>
       </div2>
       <div3 style="float:left; width:9%">
         <a href="/LaEmpresa.ejs" class="btn btn-primary">La Empresa</a>
@@ -23,7 +23,7 @@
         <a href="/Cobros.ejs" class="btn btn-primary">¿Donde y como pagar?</a>
       </div4>
 
-      <!-- <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+       <nav><!--class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
 			<div class="container">
 				<a href="/" class="navbar-brand" title="OECHSLE S.A.">
 					<img src="/img/logo_OE.png" />
@@ -48,8 +48,15 @@
 					</ul>
 
 				</div>
-			</div>
-		</nav> -->
+			</div> -->
+         <%
+          if (req.session.user) { %>
+            <%= req.session.user.name %>
+           <a href="/logout">logout</a>
+        <% }else{%>
+              <a href="/login">login</a>
+         <%}%>
+		</nav>
 
       <%- body %>
     </body>
