@@ -16,15 +16,18 @@ module.exports.bootstrap = async function() {
   // For example:
   // ```
   // // Set up fake development data (or if we already have some, avast)
-  // if (await User.count() > 0) {
-  //   return;
-  // }
-  //
-  // await User.createEach([
-  //   { emailAddress: 'ry@example.com', fullName: 'Ryan Dahl', },
-  //   { emailAddress: 'rachael@example.com', fullName: 'Rachael Shaw', },
-  //   // etc.
-  // ]);
-  // ```
+   if (await User.count() > 0) {
+     console.log("No Vacia")
+     return;
+   }
+   console.log("Vacia")
+   await User.createEach([ //son arreglos por eso se pasa en llaves
+     { email: 'ry@example.com',
+       full: 'Ryan Dahl',
+      password: '1234'},
+     { email: 'juan@pepe.com',
+       full: 'Juan Jose',
+      password: '4321'},
+   ]);
 
 };
