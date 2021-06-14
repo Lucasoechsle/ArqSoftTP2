@@ -1,1 +1,13 @@
-<input type="submit" value="Pagar" href="/pay.ejs">
+<table>
+    <% for (let p of req.session.carrito.productos){ %>
+        <tr>
+            <td><%- p.cantidad %></td>
+            <td><%- p.producto %></td>
+            <td>$ <%- p.costoU %></td>
+            <td><a href="/carrito/delete/<%= p.producto %>">❌</a></td>
+        </tr>
+    <% } %>
+</table>
+
+
+<input type="submit" value="Pagar" href="/pay">

@@ -7,13 +7,14 @@
             <img src="images/cas7.png" class="card-img-top" width="150px" height="150px"/>
             <footer>Aceite Motor</footer>
             A-2212 <br>
-            <a href="/Carrito"/>Seleccionar</a>
-            <form1 action="/Carrito" method="Post">
-                <p>Cantidad: <input type="number" name="Cantidad" size="10"></p>
-            </form1>
+            <form action="/Carrito/add" method="Post">
+                <p>Cantidad: <input type="number" name="cantidad" size="10">
+                    <input type="hidden" name="producto" size="10" value="A-2212">
+                </p>
+                <input type="submit" value="Agregar">
+            </form>
         </div>
     </div>
-</div>
 </div>
 
 <div style="float:left;">
