@@ -1,12 +1,38 @@
-body{
+body#homepage{
   background-color: #ffffff;
-  margin-left: 40px; /* o 20px */
-  margin-right: 40px;
-  margin-top: 1px;
-  padding-bottom: 25px;
-
-
+  padding: 20px;
+  margin-right: 25px;
+  margin-left: 40px;
 }
+body#ProductsFram{
+  background-color: #F2A103;
+  padding: 20px;
+  margin-right: 25px;
+  margin-left: 40px;
+}
+body#ProductsMolykote{
+   background-color: #14acc2;
+   padding: 20px;
+   margin-right: 25px;
+   margin-left: 40px;
+ }
+body#ProductsCastrol{
+  background-color: #00AF69;
+  padding: 20px;
+  margin-right: 25px;
+  margin-left: 40px;
+}
+body#login{
+  background-color: #ffffff;
+  padding: 20px;
+  margin-right: 25px;
+  margin-left: 40px;
+}
+
+img{
+  text-align: center;
+}
+
 h1{
   text-align: left;
 }
@@ -20,6 +46,7 @@ h3{
 
 footer{
   font-size: 140%;
+
 }
 div1{
   text-decoration: underline;
@@ -44,9 +71,14 @@ ol{
 div5{
   text-align: center;
 }
+div6{
+  text-align: center;
+  font-size: 125%;
+}
 form{
   text-align: center;
 }
+
 /* si hago fotter1, puedo editar cada uno de elllos como quiera y ver como separar los subtitulos de las fotos y que los obrdes de los de la dercha
 sean mas parejos que los de la izquieda, puedp poner el logo en h1 para editarlo en fotter, la foto del gol tren, la iba a poner
  en todas las pagnas pero mejor la dejo solo en la de los produtcos, asi q la saque de l ayout y la puse arriba del en homepage*/

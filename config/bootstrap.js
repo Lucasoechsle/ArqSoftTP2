@@ -16,23 +16,49 @@ module.exports.bootstrap = async function() {
   // For example:
   // ```
   // // Set up fake development data (or if we already have some, avast)
-   if (await User.count() > 0) {
-     console.log('No Vacia');
-     return;
-   }
-   console.log('Vacia');
-   await User.createEach([
-     {
-       email: 'ry@example.com',
-       name: 'Ryan Dahl',
+  if (await User.count() > 0) {
+    console.log('No Vacia');
+    return;
+  }
+  console.log('Vacia');
+  await User.createEach([
+    {
+      email: 'ry@example.com',
+      name: 'Ryan Dahl',
       password: '12345',
-      },
-     {
-       email: 'juan@pepe.com',
-       name: 'Juan Jose',
+    },
+    {
+      email: 'juan@pepe.com',
+      name: 'Juan Jose',
       password: '54321' ,
-     },
+    },
 
-]);
+  ]);
 
 };
+
+/*
+if (await User.count() > 0) {
+    console.log('No Vacia');
+    return;
+  }
+  console.log('Vacia');
+  await User.createEach([
+    {
+      brand: Fram
+      name: Filtro de aire
+      code:
+      stock:
+      
+    },
+    {
+      email: 'juan@pepe.com',
+      name: 'Juan Jose',
+      password: '54321' ,
+    },
+
+  ]);
+
+};
+ */
+

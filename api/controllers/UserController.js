@@ -1,3 +1,4 @@
+
 module.exports = {
   login: async function (req, res) {
     const email = req.param('email');
@@ -18,11 +19,13 @@ module.exports = {
     }
   },
 
-    logout: async function (req, res) {
-      req.session.user = null;
-      res.redirect('/');
-    }
+  logout: async function (req, res) {
+    req.session.user = null;
+    res.redirect('/');
+  }
 
 
 };
+
+
 

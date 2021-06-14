@@ -11,17 +11,28 @@
       <div3 style="float:left; width:15%">
       <img src="images/logopng.png">
       </div3> <br>
-      <div1 style="float:left; width:8%">
-        <a href="/" class="btn btn-primary">Productos</a> </div1>
-      <div2 style="float:left; width:8%">
-        <a href="/login" class="btn btn-primary">login</a>
-      </div2>
-      <div3 style="float:left; width:9%">
+      <div1 style="float:left; width:4%">
+        <a href="/" class="btn btn-primary">Inicio</a> </div1>
+
+      <div6 style="float:left; width:9%">
+        <a href="/Carrito" class="btn btn-primary">Carrito</a>
+      </div6>
+      <div3 style="float:left; width:8%">
         <a href="/LaEmpresa.ejs" class="btn btn-primary">La Empresa</a>
       </div3>
-      <div4 style="float:left; width:8%">
-        <a href="/Cobros.ejs" class="btn btn-primary">¿Donde y como pagar?</a>
+      <div4 style="float:left; width:57%">
+        <a href="/Cobros" class="btn btn-primary">¿Donde y como pagar?</a>
       </div4>
+      <div2 style="float:left; width:5%">
+        <img src="images/usuario.png" width="40px" height="40px">
+        <%
+        if (req.session.user) { %>
+          <%= req.session.user.name %>
+          <a href="/logout">Salir</a>
+        <% }else{%>
+          <a href="/login">Ingresar</a>
+        <%}%>
+      </div2>
 
        <nav><!--class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
 			<div class="container">
@@ -49,13 +60,6 @@
 
 				</div>
 			</div> -->
-         <%
-          if (req.session.user) { %>
-            <%= req.session.user.name %>
-           <a href="/logout">logout</a>
-        <% }else{%>
-              <a href="/login">login</a>
-         <%}%>
 		</nav>
 
       <%- body %>
