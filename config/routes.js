@@ -20,7 +20,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-  'GET /login':{view: 'pages/login' },
+  'GET /login': 'UserController.showLogin',
   'POST /login': 'UserController.login' ,
   '/logout': 'UserController.logout' ,
   'GET /ProductsFram':{view: 'pages/ProductsFram'} ,

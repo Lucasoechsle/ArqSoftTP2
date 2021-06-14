@@ -1,4 +1,3 @@
-
 module.exports = {
   login: async function (req, res) {
     const email = req.param('email');
@@ -20,12 +19,13 @@ module.exports = {
   },
 
   logout: async function (req, res) {
-    req.session.user = null;
-    res.redirect('/');
-  }
+    req.session.user = null
+    res.redirect('/')
+  },
+  showLogin:async function (req, res) {
+    res.view('pages/login',{msg:null})
+  },
 
 
 };
-
-
 
