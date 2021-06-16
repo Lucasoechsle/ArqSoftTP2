@@ -36,29 +36,30 @@ module.exports.bootstrap = async function() {
   ]);
 
 };
-
 /*
-if (await User.count() > 0) {
+module.exports.bootstrap = async function() {
+
+  // By convention, this is a good place to set up fake data during development.
+  //
+  // For example:
+  // ```
+  // // Set up fake development data (or if we already have some, avast)
+  if (await ProductoCastrol.count() > 0) {
     console.log('No Vacia');
     return;
   }
   console.log('Vacia');
-  await User.createEach([
+  await ProductoCastrol.createEach([
     {
-      brand: Fram
-      name: Filtro de aire
-      code:
-      stock:
-      
-    },
-    {
-      email: 'juan@pepe.com',
-      name: 'Juan Jose',
-      password: '54321' ,
+      name: 'Aceite Motor',
+      code: 'A-2212',
+      brand: 'Castrol',
+      costo: '50',
+      cant: '1',
     },
 
   ]);
 
 };
- */
 
+ */

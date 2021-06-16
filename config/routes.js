@@ -26,7 +26,8 @@ module.exports.routes = {
   'GET /ProductsFram':{view: 'pages/ProductsFram'} ,
   'GET /ProductsCastrol':{view: 'pages/ProductsCastrol'} ,
   'GET /ProductsMolykote':{view: 'pages/ProductsMolykote'} ,
-  'POST /Carrito/add': 'CarritoController.add'
+  'POST /Carrito/add': 'CarritoController.add',
+  'POST /Carrito/sale': 'SaleController.sale'
 
 
   /***************************************************************************

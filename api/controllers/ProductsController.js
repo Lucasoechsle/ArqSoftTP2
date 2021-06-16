@@ -6,37 +6,25 @@
  * @description :: Server-side actions for handling incoming requests.
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
-
 /*
-
 module.exports = {
-  orden: async function (req, res) {
-    let product = await Product.find({});
+  login: async function (req, res) {
+    const name = req.param('nombre');
+    const code = req.param('codigo');
+    const brand = req.param('marca')
+    const cost = req.param('costo')
 
-    res.view('homepages/orden', {products: product, amount: 0, sum: 0, arrprod: [0]});
+    const products = await Products.findOne({
+    });
+    if (products) {
+      req.session.products = products;
+      res.redirect("pages/Inicio");
+
+    }
   },
 
+};
 
-  addorden: async function (req, res) {
-    let found = await Product.findOne({
-      name: req.param("size")
-    });
+ */
 
-    let arrprod = [];
-
-    for (let i = 0; i < req.param("arrprod").length; i++) {
-      if (req.param("arrprod")[i] !== ',') {
-        arrprod.push(Number(req.param("arrprod")[i]));
-      }
-    }
-
-    arrprod.push(found.id);
-
-    let amount = Number(req.param("Price"));
-    amount += found.cost;
-    let cant = req.param("plus");
-    cant++;
-
-  };
-  */
 

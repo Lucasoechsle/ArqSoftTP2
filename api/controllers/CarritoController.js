@@ -9,6 +9,7 @@ module.exports = {
   add: async function (req, res) {
     const cantidad = req.param('cantidad')
     const producto = req.param('producto')
+    const codigo = req.param('codigo')
 
     if (!req.session.carrito) {
       req.session.carrito = {
@@ -21,7 +22,8 @@ module.exports = {
       {
         producto: producto,
         cantidad: cantidad,
-        costoU: 4
+        codigo: codigo,
+        costoU: 50,
       }
     )
     res.view('pages/carro')
