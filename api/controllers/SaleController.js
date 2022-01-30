@@ -14,7 +14,7 @@ module.exports = {
       }
     }
 
-    req.session.sale.productos.push(
+    req.session.sale.total.push(
       {
         total: p.costoU*p.cantidad
       }

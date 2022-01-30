@@ -20,14 +20,39 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
+  '/metodosdepago': { view: 'pages/metodosdepago' },
+  '/shipping': { view: 'pages/shipping' },
+  '/Descuento': { view: 'pages/Descuento' },
+  '/transferencia': { view: 'pages/transferencia' },
+  '/SantanderRio': { view: 'pages/SantanderRio' },
+  '/Uala': { view: 'pages/Uala' },
+  '/TarjetaNoCupon': { view: 'pages/TarjetaNoCupon' },
+  '/Brubank': { view: 'pages/Brubank' },
+  '/Factura': { view: 'pages/Factura' },
+  '/LaEmpresa': { view: 'pages/LaEmpresa' },
+  '/Carroo': 'CarritoController.add',
+
+  '/Tarjeta': { view: 'pages/Tarjeta' },
+
+
+  '/FinalSale': { view: 'pages/FinalSale' },
+  '/Efectivo': { view: 'pages/Efectivo' },
   'GET /login': 'UserController.showLogin',
   'POST /login': 'UserController.login' ,
   '/logout': 'UserController.logout' ,
   'GET /ProductsFram':{view: 'pages/ProductsFram'} ,
   'GET /ProductsCastrol':{view: 'pages/ProductsCastrol'} ,
-  'GET /ProductsMolykote':{view: 'pages/ProductsMolykote'} ,
-  'POST /Carrito/add': 'CarritoController.add',
-  'POST /Carrito/sale': 'SaleController.sale'
+  'GET /ProductsMolykote':{view: 'pages/ProductsMolykote'},
+  'GET /Carrito/sale':{view: 'pages/sale'},
+  'POST /CarritoCastrol/add': 'CarritoController.add',
+  'POST /CarritoFram/add': 'CarritoFramController.add',
+  'POST /CarritoMolykote/add': 'CarritoMolykote.add',
+  'POST /Descuento': 'EnvioController.next',
+  'POST /FinalSale': 'CardsController.final',
+  'POST /Tarjeta': 'CuponController.next',
+
+
+
 
 
   /***************************************************************************

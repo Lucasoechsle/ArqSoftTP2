@@ -1,0 +1,58 @@
+<body id="metodosdepago">
+
+
+
+<h2>Su total es: </h2>
+<div style="text-align: center">
+    <table>
+        <% for (let p of req.session.carrito.productos){ %>
+            <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Unidades</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Precio Unidad</th>
+                <th scope="col">Subtotal</th>
+            </tr>
+
+            <tr>
+                <td><%- p.producto %></td>
+                <td><%- p.cantidad %></td>
+                <td><%- p.codigo %></td>
+                <td>$ <%- p.costoU %></td>
+                <td>$ <%- p.costoU*p.cantidad %></td>
+
+                <td><a href="/Carrito/delete/<%= p.producto %>">❌</a></td>
+            </tr>
+        <% } %>
+    </table>
+    <h2>Gracias por tu compra!</h2><br>
+
+
+
+</div>
+
+<div5>
+    <h3> Nuestros bancos</h3>
+</div5>
+
+
+
+
+
+<div3 style="text-align:center">
+    <a href="/SantanderRio" class="btn btn-primary">Santander Rio</a> </div3>
+<br>
+<!-- ver como hacer el profe para no crear una view en carrito y cuando aprieta se crea sola. hacer eso aca y luego desde ahi hacemos un boton para shipping al igual que en efectivo.-->
+<!-- en efectivo lo que vamos a hacer es insertar una factura de su compra y segun el banco que elije le proporciona un cbu y luego sale una ventana donde debe adjuntar el comprobante-->
+
+<div6 style="text-align:center">
+    <a href="/Uala" class="btn btn-primary">Uala</a> </div6>
+<br>
+
+<div1 style="text-align:center">
+    <a href="/Brubank" class="btn btn-primary">Brubank</a> </div1>
+
+
+
+
+</body>

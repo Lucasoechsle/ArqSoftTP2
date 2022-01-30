@@ -2,14 +2,14 @@
 <iframe style="border: 0;"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2339.61062712214!2d-64.20561179375073!3d-31.395890290669062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432988cd85a8987%3A0x91aebf877bf0e18d!2sOechsle%20S.A.!5e0!3m2!1ses!2sar!4v1623033538239!5m2!1ses!2sar"
         width="1300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-<h1>Su pedido</h1>
+<h2>Su pedido</h2>
 <div style="text-align: center">
 <table>
     <% for (let p of req.session.carrito.productos){ %>
     <tr>
         <th scope="col">Producto</th>
         <th scope="col">Unidades</th>
-        <th scope="col">Codigo</th>
+
         <th scope="col">Precio Unidad</th>
         <th scope="col">Subtotal</th>
     </tr>
@@ -17,16 +17,26 @@
     <tr>
         <td><%- p.producto %></td>
         <td><%- p.cantidad %></td>
-        <td><%- p.codigo %></td>
+
         <td>$ <%- p.costoU %></td>
         <td>$ <%- p.costoU*p.cantidad %></td>
 
-        <td><a href="/carrito/delete/<%= p.producto %>">❌</a></td>
-    </tr>
+        <td><a href="/Carrito/delete/<%= p.producto %>">❌</a></td>
+
+
     <% } %>
 </table>
-<form action="/Carrito/sale" method="Post">
-    <input type="hidden" total="total" size="10" value="120">
-    <input type="submit" value="Pagar">
-</form>
+
+
+    <form action="/CarritoCastrol/sale" method="Post">
+        <input type="hidden" total="total" size="10" value="120">
+        <div1 style="margin:0px auto; width:4%">
+            <a href="/" class="btn btn-primary">Seguir Comprando</a> </div1>
+    </form>
+    <form action="/CarritoCastrol/sale" method="Post">
+        <input type="hidden" total="total" size="10" value="120">
+        <div1 style="margin:0px auto; width:4%">
+            <a href="/metodosdepago" class="btn btn-primary">Metodos de Pago</a> </div1>
+    </form>
+
 </div>

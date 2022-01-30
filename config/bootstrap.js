@@ -25,17 +25,90 @@ module.exports.bootstrap = async function() {
     {
       email: 'ry@example.com',
       name: 'Ryan Dahl',
-      password: '12345',
+      contra: '12345',
     },
     {
       email: 'juan@pepe.com',
       name: 'Juan Jose',
-      password: '54321' ,
+      contra: '54321' ,
     },
 
   ]);
 
+  if (await Envio.count() > 0) {
+    console.log('No Vacia');
+    return;
+  }
+  console.log('Vacia');
+  await Envio.createEach([
+    {
+      provincia: 'cordoba',
+      ciudad: 'cordoba',
+      direccion: 'parceros',
+    }
+
+
+  ]);
+
+
+
+
+  if (await Cards.count() > 0) {
+    console.log('No Vacia');
+    return;
+  }
+  console.log('Vacia');
+  await Cards.createEach([
+    {
+      dni: '43231162',
+      numero: '123',
+      codesecurity: '12',
+
+    }
+
+
+  ]);
+
+
+  if (await TarjetaNoCupon.count() > 0) {
+    console.log('No Vacia');
+    return;
+  }
+  console.log('Vacia');
+  await Cards.createEach([
+    {
+      Dni: '43231162',
+      Nombre: 'Lucas',
+      Apellido: 'Oechsle',
+      NumeroTarjeta: '1234',
+      CodigoSeguridad: '123'
+
+    }
+
+
+  ]);
+
+
+  if (await Cupon.count() > 0) {
+    return;
+  }
+  await Cupon.createEach([
+    {
+      codigo: 'hola',
+
+
+    }
+
+
+  ]);
+
+
+
 };
+
+
+
+
 /*
 module.exports.bootstrap = async function() {
 

@@ -24,7 +24,7 @@ module.exports = {
         producto: producto,
         cantidad: cantidad,
         codigo: codigo,
-        costoU: 70,
+        costoU: 30,
       }
     )
     res.view('pages/carro')

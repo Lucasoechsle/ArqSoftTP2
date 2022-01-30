@@ -1,0 +1,48 @@
+<iframe style="border: 0;"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2339.61062712214!2d-64.20561179375073!3d-31.395890290669062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432988cd85a8987%3A0x91aebf877bf0e18d!2sOechsle%20S.A.!5e0!3m2!1ses!2sar!4v1623033538239!5m2!1ses!2sar"
+        width="1300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<!-- en style le pongo margen grande asi queda parecido a la pagina , pero por ahora lo dejo ahi -->
+
+
+<h2>Su total es: </h2>
+<div style="text-align: center">
+    <table>
+        <% for (let p of req.session.carrito.productos){ %>
+            <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Unidades</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Precio Unidad</th>
+                <th scope="col">Subtotal</th>
+            </tr>
+
+            <tr>
+                <td><%- p.producto %></td>
+                <td><%- p.cantidad %></td>
+                <td><%- p.codigo %></td>
+                <td>$ <%- p.costoU %></td>
+                <td>$ <%- p.costoU*p.cantidad %></td>
+
+                <td><a href="/Carrito/delete/<%= p.producto %>">❌</a></td>
+            </tr>
+        <% } %>
+    </table>
+    <h2>Gracias por tu compra!</h2><br>
+
+
+</div>
+<div5>
+    <h3> Beneficio de Cupon: 10% de descuento en su proxima compra! </h3>
+</div5>
+<div5>
+    <h3> Ingrese datos de su tarjeta </h3>
+</div5>
+
+<form action="/FinalSale" method="POST">
+    DNI: <input type="text" name="dni"><br>
+    Number: <input type="text" name="numero"><br>
+    Code: <input type="text" name="codesecurity"><br>
+
+    <input type="submit">
+</form>
+

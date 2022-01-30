@@ -1,0 +1,27 @@
+
+<h2>Factura a imprimir:  </h2>
+<div style="text-align: center">
+    <table>
+        <% for (let p of req.session.carrito.productos){ %>
+            <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Unidades</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Precio Unidad</th>
+                <th scope="col">Subtotal</th>
+            </tr>
+
+            <tr>
+                <td><%- p.producto %></td>
+                <td><%- p.cantidad %></td>
+                <td><%- p.codigo %></td>
+                <td>$ <%- p.costoU %></td>
+                <td>$ <%- p.costoU*p.cantidad %></td>
+
+                <td><a href="/Carrito/delete/<%= p.producto %>">❌</a></td>
+            </tr>
+        <% } %>
+
+    </table>
+
+</div>

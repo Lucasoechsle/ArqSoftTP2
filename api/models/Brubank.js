@@ -2,14 +2,11 @@ module.exports = {
 
   attributes: {
     // id,created y update se crean automaticamente, creamos name email pass etc
-    name:{
-      type: 'string',
-    },
-    email:{
+    cbu:{
       type: 'string',
       required: true,
     },
-    contra:{
+    alias:{
       type: 'string',
       required: true,
     }
